@@ -1,7 +1,3 @@
-// @import "variables";
-
-// -----------------------------------------------------------
-
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -17,7 +13,7 @@ h1 {
 }
 
 .comment {
-  font-family: range-mono;
+  font-family: $font-meta;
   font-weight: 400;
   font-size: normal;
   font-size: 12px;

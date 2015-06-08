@@ -18,7 +18,8 @@ module.exports = function(grunt) {
           sortby: 'posted',
           sortorder: 'descending'
         }],
-        helpers: './app/js/helpers/helpers.js',
+
+        helpers: './src/js/helpers/helpers.js',
         layout: 'page.hbs',
         layoutdir: './src/templates/layouts/',
         partials: './src/templates/partials/**/*.hbs'
@@ -48,7 +49,7 @@ module.exports = function(grunt) {
         },
 
         files : {
-          "_build/css/app.min.css": "app/scss/main.scss"
+          "_build/css/app.min.css": "./src/scss/main.scss"
         }
       }
     },
@@ -63,16 +64,16 @@ module.exports = function(grunt) {
         },
 
         files: {
-          "_build/js/app.min.js" : ["app/js/libs/jquery-1.11.2.min.js", 
-                                   "app/js/app/app.js",
-                                   "app/js/helpers/helpers.js"]
+          "_build/js/app.min.js" : ["./src/js/libs/jquery-1.11.2.min.js", 
+                                   "./src/js/app/app.js",
+                                   "./src/js/helpers/helpers.js"]
         }
       }
     },
 
     connect: {
 
-      server : {
+      server: {
         options: {
           open: true,
           base: './_build/'
@@ -83,18 +84,18 @@ module.exports = function(grunt) {
     watch: {
 
       js: {
-        files: ["app/js/**/*.js"],
+        files: ["src/js/**/*.js"],
         tasks: ["uglify:dev"],
         options: {
-    			livereload: true,
+    		  livereload: true,
     		}
-    },
+      },
 
-    scss: {
-      files: ["app/scss/**/*.scss"],
-      tasks: ["sass:dev"],
-      options: {
-  			livereload: true,
+      scss: {
+        files: ["src/scss/**/*.scss"],
+        tasks: ["sass:dev"],
+        options: {
+  			  livereload: true,
     		}
       }
     }
