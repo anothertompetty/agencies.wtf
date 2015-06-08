@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   "use strict";
 
+  grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-connect");
@@ -34,7 +35,6 @@ module.exports = function(grunt) {
 
         files: {
           "build/js/app.min.js" : ["app/js/libs/jquery-1.11.2.min.js", 
-                                   "app/js/libs/unveil.js", 
                                    "app/js/app/app.js"]
         }
       }

@@ -6,20 +6,16 @@
 // -----------------------------------------------------------
 
 body {
-  font-family: $primary-font, georgia, sans-serif;
+  font-family: $font-primary, georgia, sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 28px;
   color: $color-dark;
-  background-color: $color-light;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  background-color: white;
 }
 
 .container {
-	max-width: 680px;
+	max-width: 800px;
 	position: relative;
   margin: 0 auto;
   margin-top: 60px;
@@ -28,27 +24,16 @@ body {
 }
 
 @media screen and (max-width: 680px) {
-  
   .container {
     margin-top: 15px;
   }
-
 }
 
 .container img {
   width: 100%;
 }
 
-.project,
-.section {
-  position: relative;
-  margin-bottom: $large-space;
-  padding-bottom: $large-space;
-  border-bottom: 2px solid $color-highlight;
-}
-
-.project img {
-  margin-bottom: $medium-space;
-  opacity: 0;
-  transition: opacity .3s ease-in;
+.container__type {
+  max-width: 595px;
+  margin: 0 auto;
 }

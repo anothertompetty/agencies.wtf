@@ -7,6 +7,35 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+// styles
+
+h1 {
+  font-family: $font-headline;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 72px;
+}
+
+.comment {
+  font-family: range-mono;
+  font-weight: 400;
+  font-size: normal;
+  font-size: 12px;
+  line-height: 24px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.paragraph-break {
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  width: 40px;
+  height: 1px;
+  background-color: $color-dark;
+
+}
+
 // links
 
 a, 
@@ -15,8 +44,6 @@ a:visited,
 a:hover, 
 a:active {
   text-decoration: none;
-  font-family: 'Akkurat-bold';
-  font-weight: 700;
   color: $color-dark;
   border-bottom: 2px solid $color-highlight;
 }
@@ -27,43 +54,7 @@ a:active {
   border-top: 2px solid $color-highlight;
 }
 
-a[rel="external"]::after {
-  content: " \A0\A0\A0\A0";
-  background-image: url(/img/link_after.png);
-  background-size: 10px 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-left: 1px;
-}
-
-a[rel="words"]::after {
-  content: " \A0\A0\A0\A0";
-  background-image: url(/img/words.png);
-  background-size: 10px 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 3px;
-}
-
-a[rel="work"]::after {
-  content: " \A0\A0\A0\A0";
-  background-image: url(/img/work.png);
-  background-size: 10px 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 3px;
-}
-
-
 // lists
-
-.title {  
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  border-bottom: 1px solid $color-middle;
-  display: inline-block;
-}
 
 ul,
 li {

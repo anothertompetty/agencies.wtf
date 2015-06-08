@@ -107,18 +107,29 @@
 
 // TYPOGRAPHY
 
-.u-text-normal {
-	font-weight: 400;
+.u-text-no-smoothing {
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.u-text-heavy {
-  font-family: 'Akkurat-bold';
-  font-weight: 700;
+.u-text-normal {
+	font-weight: 400;
 }
 
 .u-text-small {
   font-size: 14px;
   line-height: 24px;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
 }
 
 // LINKS
