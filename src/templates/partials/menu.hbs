@@ -1,5 +1,11 @@
 <ul>
   <li><a href="/">Home</a></li>
-	<li><a href="/posts/alasdair-monk.html">Alasdair Monk</a></li>
-  <li><a href="/posts/ije-nwokorie.html">Ije Nwokorie</a></li>
+  <li><a href="/about.html">About</a></li>
+  {{#withSort post 'data.posted'}}
+    {{#each this.pages }}
+    <li>
+      <a href="{{ replaceStr this.dest '_build' '' }}">{{ this.data.title }}</a>
+    </li>
+    {{/each}}
+  {{/withSort}}
 </ul>

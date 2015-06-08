@@ -13,6 +13,12 @@ module.exports = function(grunt) {
     assemble: {
        
       options: {
+          collections: [{
+          name: 'post',
+          sortby: 'posted',
+          sortorder: 'descending'
+        }],
+        helpers: './app/js/helpers/helpers.js',
         layout: 'page.hbs',
         layoutdir: './src/templates/layouts/',
         partials: './src/templates/partials/**/*.hbs'
