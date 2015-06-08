@@ -10,6 +10,35 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    assemble: {
+       
+      options: {
+          collections: [{
+          name: 'post',
+          sortby: 'posted',
+          sortorder: 'descending'
+        }],
+        helpers: './app/js/helpers/helpers.js',
+        layout: 'page.hbs',
+        layoutdir: './src/templates/layouts/',
+        partials: './src/templates/partials/**/*.hbs'
+      },
+
+      posts: {
+        files: [{
+          cwd: './src/content/',
+          dest: './_build/',
+          expand: true,
+          src: ['posts/*.hbs', '!_pages/**/*.hbs']
+        }, {
+          cwd: './src/content/_pages/',
+          dest: './_build/',
+          expand: true,
+          src: '**/*.hbs'
+        }]
+      }
+    },
+
     sass: {
 
       dev: {
@@ -19,7 +48,7 @@ module.exports = function(grunt) {
         },
 
         files : {
-          "build/css/app.min.css": "app/scss/main.scss"
+          "_build/css/app.min.css": "app/scss/main.scss"
         }
       }
     },
@@ -34,8 +63,9 @@ module.exports = function(grunt) {
         },
 
         files: {
-          "build/js/app.min.js" : ["app/js/libs/jquery-1.11.2.min.js", 
-                                   "app/js/app/app.js"]
+          "_build/js/app.min.js" : ["app/js/libs/jquery-1.11.2.min.js", 
+                                   "app/js/app/app.js",
+                                   "app/js/helpers/helpers.js"]
         }
       }
     },
@@ -45,6 +75,7 @@ module.exports = function(grunt) {
       server : {
         options: {
           open: true,
+          base: './_build/'
         }
       }
     },
@@ -69,5 +100,5 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask("make", ["sass:dev", "uglify:dev", "connect:server", "watch"]);
+  grunt.registerTask("make", ["assemble", "sass:dev", "uglify:dev", "connect:server", "watch"]);
 };
