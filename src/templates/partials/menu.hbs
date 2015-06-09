@@ -3,9 +3,7 @@
   <li><a href="/about.html">About</a></li>
   {{#withSort post 'data.posted'}}
     {{#each this.pages }}
-    <li>
-      <a href="{{ replaceStr this.dest '_build' '' }}">{{ this.data.title }}</a>
-    </li>
+    <li><a href="{{ replaceStr this.dest '_build' '' }}">{{ this.data.title }}</a></li>
     {{/each}}
   {{/withSort}}
 </ul>

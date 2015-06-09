@@ -1,7 +1,3 @@
-// @import "variables";
-
-// -----------------------------------------------------------
-
 // LAYOUT
 
 .u-cf {
@@ -51,6 +47,11 @@
 }
 
 // SIZE
+// Margin
+
+.u-margin-Txl {
+  margin-top: $xlarge-space;
+}
 
 .u-margin-Tl {
   margin-top: $large-space;
@@ -62,6 +63,10 @@
 
 .u-margin-Ts {
   margin-top: $small-space;
+}
+
+.u-margin-Rxl {
+  margin-right: $xlarge-space;
 }
 
 .u-margin-Rl {
@@ -76,6 +81,52 @@
   margin-top: $small-space;
 }
 
+.u-margin-Bxl {
+  margin-bottom: $xlarge-space;
+}
+
+.u-margin-Bl {
+  margin-top: $large-space;
+}
+
+.u-margin-Bm {
+  margin-top: $medium-space;
+}
+
+.u-margin-Bs {
+  margin-top: $small-space;
+}
+
+.u-margin-Lxl {
+  margin-left: $xlarge-space;
+}
+
+.u-margin-Ll {
+  margin-top: $large-space;
+}
+
+.u-margin-Lm {
+  margin-top: $medium-space;
+}
+
+.u-margin-Ls {
+  margin-top: $small-space;
+}
+
+// Padding
+
+.u-padding-Tl {
+  padding-top: $large-space;
+}
+
+.u-padding-Tm {
+  padding-top: $medium-space;
+}
+
+.u-padding-Ts {
+  padding-top: $small-space;
+}
+
 .u-padding-Rl {
   padding-top: $large-space;
 }
@@ -85,6 +136,30 @@
 }
 
 .u-padding-Rs {
+  padding-top: $small-space;
+}
+
+.u-padding-Bl {
+  padding-top: $large-space;
+}
+
+.u-padding-Bm {
+  padding-top: $medium-space;
+}
+
+.u-padding-Bs {
+  padding-top: $small-space;
+}
+
+.u-padding-Ll {
+  padding-top: $large-space;
+}
+
+.u-padding-Lm {
+  padding-top: $medium-space;
+}
+
+.u-padding-Ls {
   padding-top: $small-space;
 }
 

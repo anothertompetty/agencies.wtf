@@ -101,5 +101,11 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask("make", ["assemble", "sass:dev", "uglify:dev", "connect:server", "watch"]);
+  grunt.registerTask("make", [
+    "assemble", 
+    "sass:dev", 
+    "uglify:dev", 
+    "connect:server", 
+    "watch"
+  ]);
 };
