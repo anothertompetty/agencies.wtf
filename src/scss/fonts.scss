@@ -2,7 +2,7 @@
   font-family: 'noe-display';
   font-style: bold;
   font-weight: 700;
-  src: local('noe-display'), url(/src/scss/Noe-Display-Bold.woff) format('woff');
+  src: local('noe-display'), url(/css/Noe-Display-Bold.woff) format('woff');
 }
 
 @font-face {
@@ -10,7 +10,7 @@
   font-style: italic;
   font-weight: 400;
   src: local('noe-display'), 
-  url(./fonts/Noe-Display-Regular-Italic.woff) format('woff');
+  url(/css/Noe-Display-Regular-Italic.woff) format('woff');
 }
 
 @font-face {
@@ -18,14 +18,14 @@
   font-style: normal;
   font-weight: 400;
   src: local('noe-text'), 
-  url(./fonts/Noe-Text-Regular.woff) format('woff');
+  url(/css/Noe-Text-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'range-mono';
   font-style: normal;
   font-weight: 400;
-  src: local('range-mono'), url(/fonts/range-mono-regular.woff) format('woff');
+  src: local('range-mono'), url(/css/range-mono-regular.woff) format('woff');
 }
 
 @font-face {
@@ -33,5 +33,5 @@
   font-style: bold;
   font-weight: 700;
   src: local('range-mono'), 
-  url(../app/scss/range-mono-bold.woff) format('woff');
+  url(/css/range-mono-bold.woff) format('woff');
 }
