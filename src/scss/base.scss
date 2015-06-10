@@ -11,8 +11,6 @@ body {
 	max-width: 800px;
 	position: relative;
   margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
   padding: 0px 20px; 
 }
 
@@ -29,4 +27,29 @@ body {
 .container__type {
   max-width: 595px;
   margin: 0 auto;
+}
+
+.menu__button {
+  cursor: pointer;
+}
+
+.menu__container {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 800px;
+  height: 100vh;
+  background-color: white;
+  opacity: 0.95;
+  text-align: center;
+}
+
+.menu__list {
+  display: inline-block;
+  text-align: left;
+}
+
+.footer {
+  position: absolute;
+  // bottom: 20px;
 }

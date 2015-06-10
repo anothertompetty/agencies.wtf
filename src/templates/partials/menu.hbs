@@ -1,9 +1,24 @@
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/about.html">About</a></li>
-  {{#withSort post 'data.posted'}}
-    {{#each this.pages }}
-    	<li><a href="{{ replaceStr this.dest '_build' '' }}">{{ this.data.title }}</a></li>
-    {{/each}}
-  {{/withSort}}
-</ul>
+<div class="menu__button comment u-text-center u-margin-Tl">
+	Menu
+</div>
+
+<div class="menu__container">
+  <div class="menu__list">
+
+  	<ul>
+  	  <li class="text-large"><a href="/">Home</a></li>
+  	  <li class="text-large u-margin-Bl"><a href="/about.html">About</a></li>
+    </ul>
+
+    <ol>
+  	  {{#withSort post 'data.posted'}}
+  	    {{#each this.pages }}
+  	    	<li class="text-large">
+            <a href="{{ replaceStr this.dest '_build' '' }}">{{ this.data.title }}</a>
+          </li>
+  	    {{/each}}
+  	  {{/withSort}}
+  	</ol>
+
+  </div>
+</div>
