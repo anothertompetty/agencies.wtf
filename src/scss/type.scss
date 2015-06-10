@@ -13,13 +13,13 @@ h1 {
   line-height: 72px;
 }
 
-.text-large {
+.text--large {
   font-family: $font-primary;
   font-size: 32px;
   line-height: 48px;
 }
 
-.comment {
+.text--meta {
   font-family: $font-meta;
   font-weight: 400;
   font-style: normal;
@@ -28,8 +28,8 @@ h1 {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.comment__heavy {
-  @extend .comment;
+.text--meta--heavy {
+  @extend .text--meta;
   font-weight: 700;
   font-style: bold;
 }
