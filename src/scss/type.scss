@@ -15,7 +15,7 @@ h1 {
 
 .text--large {
   font-family: $font-primary;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 48px;
 }
 
@@ -73,20 +73,25 @@ a:hover,
 a:active {
   text-decoration: none;
   color: $color-dark;
-  border-bottom: 2px solid $color-highlight;
+  border-bottom: 1px solid $color-dark;
 }
 
 a:hover, 
 a:active {
-  background-color: $color-highlight;
-  border-top: 2px solid $color-highlight;
+  border-bottom: 1px solid $color-highlight;
 }
 
 // lists
 
 ul,
+ol,
 li {
   margin: 0px;
   padding: 0px;
   list-style: none;
+}
+
+ol,
+ol li {
+  list-style-type: decimal;
 }
