@@ -16,10 +16,35 @@ h1 {
 .comment {
   font-family: $font-meta;
   font-weight: 400;
-  font-size: normal;
+  font-style: normal;
   font-size: 12px;
   line-height: 24px;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.comment__heavy {
+  @extend .comment;
+  font-weight: 700;
+  font-style: bold;
+}
+
+blockquote {
+  font-family: $font-headline;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 60px;
+  line-height: 66px;
+  text-align: center; 
+}
+
+blockquote::before {
+  content: '\201C';
+  margin-right: -10px;
+}
+
+blockquote::after {
+  content: '\201D';
+  margin-left: -10px;
 }
 
 .paragraph-break {

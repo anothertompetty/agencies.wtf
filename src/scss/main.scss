@@ -1,40 +1,8 @@
 @import "normalize";
 @import "fonts";
 @import "variables";
+
+@import "base";
 @import "type";
+
 @import "utils";
-
-// -----------------------------------------------------------
-
-body {
-  font-family: $font-primary, georgia, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: $color-dark;
-  background-color: white;
-}
-
-.container {
-	max-width: 800px;
-	position: relative;
-  margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 0px 20px; 
-}
-
-@media screen and (max-width: 680px) {
-  .container {
-    margin-top: 15px;
-  }
-}
-
-.container img {
-  width: 100%;
-}
-
-.container__type {
-  max-width: 595px;
-  margin: 0 auto;
-}
