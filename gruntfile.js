@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    clean: ["./_build/img/", "./_build/fonts/"],
+    clean: ["./_build/"],
 
     assemble: {
        
