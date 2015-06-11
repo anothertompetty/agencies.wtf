@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    clean: ["./_build/img/"],
+    clean: ["./_build/img/", "./_build/fonts/"],
 
     assemble: {
        
@@ -41,25 +41,37 @@ module.exports = function(grunt) {
           expand: true,
         }]
       }
+
     },
 
     copy: {
 
-      options: {
-        noProcess: ['**/*.{png,gif,jpg,ico,psd,woff}']
-      },
-
       main: {
-        cwd: './src/img',
-        src: '**/*',
-        dest: './_build/img',
-        expand: true,
+
+        options: {
+          noProcess: ['**/*.{png,gif,jpg,ico,psd,woff}']
+        },
+
+        files: [{
+          cwd: './src/img',
+          src: '**/*',
+          dest: './_build/img',
+          expand: true,
+        }, {
+          cwd: './src/fonts',
+          src: '**/*',
+          dest: './_build/fonts',
+          expand: true,
+        }]
+
       }
+
     },
 
     sass: {
 
       dev: {
+
         options: {
           style: "compressed",
           sourcemap : "none"
@@ -68,12 +80,15 @@ module.exports = function(grunt) {
         files : {
           "_build/css/app.min.css": "./src/scss/main.scss"
         }
+
       }
+
     },
 
     uglify: {
 
       dev: {
+
         options: {
           compress: true,
           mangle: true,
@@ -85,7 +100,9 @@ module.exports = function(grunt) {
                                    "./src/js/app/app.js",
                                    "./src/js/helpers/helpers.js"]
         }
+        
       }
+
     },
 
     connect: {
@@ -96,6 +113,7 @@ module.exports = function(grunt) {
           base: './_build/'
         }
       }
+
     },
 
     watch: {
@@ -115,7 +133,9 @@ module.exports = function(grunt) {
   			  livereload: true,
     		}
       }
+
     }
+
   });
 
   grunt.registerTask("make", [
@@ -127,4 +147,5 @@ module.exports = function(grunt) {
     "connect:server", 
     "watch"
   ]);
+
 };
