@@ -57,14 +57,13 @@ module.exports = function(grunt) {
           src: '**/*',
           dest: './_build/img',
           expand: true,
-        },
-        {
+        }, {
           cwd: './src/fonts',
           src: '**/*',
           dest: './_build/fonts',
           expand: true,
         }]
-        
+
       }
 
     },
@@ -72,6 +71,7 @@ module.exports = function(grunt) {
     sass: {
 
       dev: {
+
         options: {
           style: "compressed",
           sourcemap : "none"
@@ -80,6 +80,7 @@ module.exports = function(grunt) {
         files : {
           "_build/css/app.min.css": "./src/scss/main.scss"
         }
+
       }
 
     },
@@ -87,6 +88,7 @@ module.exports = function(grunt) {
     uglify: {
 
       dev: {
+
         options: {
           compress: true,
           mangle: true,
@@ -98,6 +100,7 @@ module.exports = function(grunt) {
                                    "./src/js/app/app.js",
                                    "./src/js/helpers/helpers.js"]
         }
+        
       }
 
     },
