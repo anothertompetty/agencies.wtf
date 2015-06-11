@@ -2,23 +2,71 @@ module.exports = function(grunt) {
 
   "use strict";
 
+  grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks("grunt-contrib-watch");
 
   grunt.initConfig({
+
+    clean: ["./_build/img/"],
+
+    assemble: {
+       
+      options: {
+        collections: [{
+          name: 'post',
+          sortby: 'posted',
+          sortorder: 'descending'
+        }],
+        helpers: './src/js/helpers/helpers.js',
+        layout: 'page.hbs',
+        layoutdir: './src/templates/layouts/',
+        partials: './src/templates/partials/**/*.hbs'
+      },
+
+      posts: {
+        files: [{
+          cwd: './src/content/',
+          src: ['posts/*.hbs', '!_pages/**/*.hbs'],
+          dest: './_build/',
+          expand: true,
+        }, {
+          cwd: './src/content/_pages/',
+          src: '**/*.hbs',
+          dest: './_build/',
+          expand: true,
+        }]
+      }
+    },
+
+    copy: {
+
+      options: {
+        noProcess: ['**/*.{png,gif,jpg,ico,psd,woff}']
+      },
+
+      main: {
+        cwd: './src/img',
+        src: '**/*',
+        dest: './_build/img',
+        expand: true,
+      }
+    },
 
     sass: {
 
       dev: {
         options: {
           style: "compressed",
-          sourcemap : "auto"
+          sourcemap : "none"
         },
 
         files : {
-          "build/css/app.min.css": "app/scss/main.scss"
+          "_build/css/app.min.css": "./src/scss/main.scss"
         }
       }
     },
@@ -29,22 +77,23 @@ module.exports = function(grunt) {
         options: {
           compress: true,
           mangle: true,
-          preserveComments: false
+          preserveComments: false,
         },
 
         files: {
-          "build/js/app.min.js" : ["app/js/libs/jquery-1.11.2.min.js", 
-                                   "app/js/libs/unveil.js", 
-                                   "app/js/app/app.js"]
+          "_build/js/app.min.js" : ["./src/js/libs/jquery-1.11.2.min.js", 
+                                   "./src/js/app/app.js",
+                                   "./src/js/helpers/helpers.js"]
         }
       }
     },
 
     connect: {
 
-      server : {
+      server: {
         options: {
           open: true,
+          base: './_build/'
         }
       }
     },
@@ -52,22 +101,30 @@ module.exports = function(grunt) {
     watch: {
 
       js: {
-        files: ["app/js/**/*.js"],
+        files: ["src/js/**/*.js"],
         tasks: ["uglify:dev"],
         options: {
-    			livereload: true,
+    		  livereload: true,
     		}
-    },
+      },
 
-    scss: {
-      files: ["app/scss/**/*.scss"],
-      tasks: ["sass:dev"],
-      options: {
-  			livereload: true,
+      scss: {
+        files: ["src/scss/**/*.scss"],
+        tasks: ["sass:dev"],
+        options: {
+  			  livereload: true,
     		}
       }
     }
   });
 
-  grunt.registerTask("make", ["sass:dev", "uglify:dev", "connect:server", "watch"]);
+  grunt.registerTask("make", [
+    "clean",
+    "assemble",
+    "copy", 
+    "sass:dev", 
+    "uglify:dev", 
+    "connect:server", 
+    "watch"
+  ]);
 };

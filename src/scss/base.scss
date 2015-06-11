@@ -1,0 +1,35 @@
+body {
+  font-family: $font-primary, georgia, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $color-dark;
+  background-color: white;
+}
+
+.container {
+	max-width: 800px;
+	position: relative;
+  margin: 0 auto;
+  padding: 0px 20px; 
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    margin-top: 15px;
+  }
+}
+
+.container img {
+  width: 100%;
+}
+
+.container__inner {
+  max-width: 595px;
+  margin: 0 auto;
+}
+
+.footer {
+  position: absolute;
+  // bottom: 20px;
+}
