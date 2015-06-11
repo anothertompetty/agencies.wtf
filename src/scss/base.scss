@@ -29,34 +29,6 @@ body {
   margin: 0 auto;
 }
 
-.menu__button {
-  cursor: pointer;
-  z-index: 100;
-}
-
-.menu__container {
-  display: none;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  width: 800px;
-  height: 100vh;
-  background-color: white;
-  opacity: 0.95;
-  text-align: center;
-}
-
-@media screen and (max-width: 800px) {
-  .menu__container {
-    width: 100%;
-  }
-}
-
-.menu__list {
-  display: inline-block;
-  text-align: left;
-}
-
 .footer {
   position: absolute;
   // bottom: 20px;
