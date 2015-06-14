@@ -9,6 +9,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.initConfig({
 
@@ -61,6 +62,11 @@ module.exports = function(grunt) {
           cwd: './src/fonts',
           src: '**/*',
           dest: './_build/fonts',
+          expand: true,
+        }, {
+          cwd: './src',
+          src: 'CNAME',
+          dest: './_build',
           expand: true,
         }]
 
@@ -134,6 +140,15 @@ module.exports = function(grunt) {
     		}
       }
 
+    },
+
+    'gh-pages': {
+    
+      options: {
+        base: '_build'
+      },
+      src: '**/*'
+  
     }
 
   });
@@ -146,6 +161,10 @@ module.exports = function(grunt) {
     "uglify:dev", 
     "connect:server", 
     "watch"
+  ]);
+
+  grunt.registerTask("deploy", [
+    "gh-pages"
   ]);
 
 };
