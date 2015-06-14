@@ -1,7 +1,7 @@
 $(document).on('ready', function() {
-   
+
   $('.menu__button').on('click', function() {
-    $('.menu').toggle('fast');
+    $('.menu').fadeToggle(125);
   });
 
 });
