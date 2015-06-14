@@ -14,7 +14,7 @@ posted: 2014-01-28
   {{#withSort post 'data.posted'}}
   	{{#each this.pages }}
       <div class="all-posts__post u-text-center u-margin-Bl">
-    		<a href="{{ replaceStr this.dest '_build' '' }}" class="link--plain">
+        <a href="{{ replaceStr this.dest '_build' '' }}" class="link--plain">
           {{this.data.title}}</br>
           {{this.data.interviewee}}
           <img src="{{this.data.image}}" class="u-margin-Tm">
