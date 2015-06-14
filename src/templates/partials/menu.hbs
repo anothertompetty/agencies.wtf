@@ -8,10 +8,9 @@
 <div class="menu">
   <div class="menu__list u-margin-Txl">
   	<ul>
-  	  <li class="text--large"><a href="/">Home</a></li>
-  	  <li class="text--large u-margin-Bl"><a href="/about.html">About</a></li>
-    </ul>
-    <ol>
+  	  <li class="menu__list--page"><a href="/">HOME</a></li>
+  	  <li class="menu__list--page u-margin-Bl"><a href="/about.html">ABOUT</a></li>
+      <hr class="paragraph-break">
   	  {{#withSort post 'data.posted'}}
   	    {{#each this.pages }}
   	    	<li class="text--large">
@@ -19,6 +18,6 @@
           </li>
   	    {{/each}}
   	  {{/withSort}}
-  	</ol>
+  	</ul>
   </div>
 </div>
