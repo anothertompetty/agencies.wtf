@@ -7,3 +7,19 @@ posted: 2014-01-28
 <h1 class="u-text-center u-margin-Bxl">{{this.page.title}}</h1>
 
 <p class="container__inner text--meta u-text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+<hr class="paragraph-break">
+
+<div class="all-posts">
+  {{#withSort post 'data.posted'}}
+  	{{#each this.pages }}
+      <div class="all-posts__post u-text-center u-margin-Bl">
+    		<a href="{{ replaceStr this.dest '_build' '' }}" class="link--plain">
+          {{this.data.title}}</br>
+          {{this.data.interviewee}}
+          <img src="{{this.data.image}}" class="u-margin-Tm">
+        </a>
+      </div> 
+  	{{/each}}
+  {{/withSort}}
+</div>

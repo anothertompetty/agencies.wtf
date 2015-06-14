@@ -1,0 +1,16 @@
+@media screen and (max-width: 840px) {
+  .all-posts {
+    text-align: center;
+  }
+}
+
+.all-posts__post {
+  max-width: 390px;
+  display: inline-block;
+}
+
+@media screen and (min-width: 800px) {
+  .all-posts__post:nth-child(odd) {
+    margin-right: 15px;
+  }
+}

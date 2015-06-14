@@ -82,6 +82,12 @@ a:active {
   border-bottom: 1px solid $color-dark;
 }
 
+a.link--plain {
+  text-decoration: none;
+  color: $color-dark;
+  border-bottom: 0px;
+}
+
 // lists
 
 ul,
