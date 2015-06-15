@@ -3,6 +3,12 @@
   z-index: 100;
 }
 
+.menu__button__icon {
+  width: 10px !important;
+  height: 9px;
+  display: inline;
+}
+
 .menu {
   display: none;
   position: fixed;

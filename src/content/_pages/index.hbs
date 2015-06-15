@@ -1,7 +1,6 @@
 ---
 title: "Agencies"
 interviewee: "Home"
-posted: 2014-01-28
 ---
 
 <h1 class="u-text-center u-margin-Bxl">{{this.page.title}}</h1>
@@ -15,7 +14,7 @@ posted: 2014-01-28
   	{{#each this.pages }}
       <div class="all-posts__post u-text-center u-margin-Bl">
         <a href="{{ replaceStr this.dest '_build' '' }}" class="link--plain">
-          {{this.data.title}}</br>
+          <span class="all-posts__post__title">{{this.data.title}}</span></br>
           {{this.data.interviewee}}
           <img src="{{this.data.image}}" class="u-margin-Tm">
         </a>
