@@ -4,6 +4,12 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 430px) {
+  .email-capture {
+    margin: 0px 20px;
+  }
+}
+
 input[type=email] {
   background-color: white;
   border: 0px;
@@ -20,12 +26,14 @@ input:focus {
 }
 
 input[type=submit] {
+  -webkit-appearance: none;
   border: 0;
+  border-radius: 0;
+  padding: 0px 15px;
   background-color: $color-dark;
-  color: white;
   font-family: $font-meta;
   font-size: 12px;
-  padding: 0px 15px;
+  color: white;
   height: 40px;
   float: right;
 }
