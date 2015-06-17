@@ -25,6 +25,11 @@ h1 {
   line-height: 42px;
 }
 
+.text--question span {
+  border-bottom: 1px solid $color-dark;
+  position: relative;
+}
+
 .text--meta {
   font-family: $font-meta;
   font-weight: 400;
