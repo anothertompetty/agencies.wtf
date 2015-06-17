@@ -25,9 +25,12 @@ h1 {
   line-height: 42px;
 }
 
+.text--question {
+  margin-bottom: 24px !important;
+}
+
 .text--question span {
   border-bottom: 1px solid $color-dark;
-  position: relative;
 }
 
 .text--meta {
