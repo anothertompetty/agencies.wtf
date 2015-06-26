@@ -9,6 +9,11 @@
   display: inline;
 }
 
+.menu__button__icon--close {
+  @extend .menu__button__icon;
+  display: none;
+}
+
 .menu {
   display: none;
   position: fixed;
