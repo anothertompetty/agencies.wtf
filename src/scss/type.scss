@@ -13,12 +13,6 @@ h1 {
   line-height: 72px;
 }
 
-.text--medium {
-  font-family: $font-primary;
-  font-size: 22px;
-  line-height: 40px;
-}
-
 .text--large {
   font-family: $font-primary;
   font-size: 24px;
@@ -55,6 +49,7 @@ blockquote {
   font-size: 50px;
   line-height: 60px;
   text-align: center; 
+  margin: 0;
 }
 
 blockquote::before {
@@ -64,7 +59,14 @@ blockquote::before {
 
 blockquote::after {
   content: '\201D';
-  margin-left: -10px;
+  margin-left: -14px;
+}
+
+@media screen and (max-width: 680px) {
+  blockquote {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 
 .paragraph-break {
