@@ -15,6 +15,14 @@
   }
 }
 
+.all-posts__post img {
+  transition: opacity 0.125s;
+}
+
+.all-posts__post img:hover {
+  opacity: 0.8;
+}
+
 .all-posts__post__title {
 	font-family: $font-quote;
 	font-weight: 400;
